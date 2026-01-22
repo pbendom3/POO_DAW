@@ -16,6 +16,8 @@ public class PacienteApp {
         System.out.println(patri.esMayorDeEdad());
         System.out.println(alejandro.esMayorDeEdad());
 
+        System.out.println(alejandro);
+
 
 
 
