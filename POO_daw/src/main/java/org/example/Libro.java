@@ -31,7 +31,7 @@ public class Libro {
     public void prestar(Estudiante estudiante){
 
         /// // !!!!!!!!!!!!
-        
+
         if (disponible){
             disponible=false;
             System.out.println("El libro " + titulo + " ha sido prestado con éxito a " + estudiante.getNombre() + " de " + estudiante.getCurso());

@@ -36,7 +36,7 @@ public class EstudianteApp {
         las_48_leyes.devolver();
         las_48_leyes.devolver();
         System.out.println(las_48_leyes.estaDisponible());
-        System.out.println(ivan.getLibro());
+       
 
     }
 }
