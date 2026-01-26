@@ -1,4 +1,4 @@
-package org.example;
+package Biblio;
 
 public class Libro {
 
@@ -11,8 +11,9 @@ public class Libro {
     private String id;
     private boolean disponible;
     private Estudiante estudiantePrestado;
+    private Editorial editorial;
 
-    public Libro (String titulo, String autor){
+    public Libro (String titulo, String autor, Editorial editorial){
         this.titulo=titulo;
         this.autor=autor;
         disponible = true;
@@ -20,6 +21,7 @@ public class Libro {
         librosDisponibles++;
         id = calcularId();
         estudiantePrestado=null;
+        this.editorial=editorial;
     }
 
     private String calcularId (){
@@ -28,19 +30,24 @@ public class Libro {
 
     }
 
-    public void prestar(Estudiante estudiante){
+    public Prestamo prestar(Estudiante estudiante){
 
-        /// // !!!!!!!!!!!!
+        Prestamo prestamo = null;
 
-        if (disponible){
+        if (disponible && estudiante.getLibro() == null){
             disponible=false;
             System.out.println("El libro " + titulo + " ha sido prestado con éxito a " + estudiante.getNombre() + " de " + estudiante.getCurso());
             librosDisponibles--;
             estudiantePrestado=estudiante;
             estudiantePrestado.setLibro(this);
+            prestamo = new Prestamo(estudiante,this);
+        } else if (estudiante.getLibro() != null) {
+            System.out.println("El estudiante " + estudiante.getNombre() + " ya tiene un libro prestado.");
         }else{
             System.out.println("El libro " + titulo + " no está disponible para prestar.");
         }
+
+        return prestamo;
 
     }
 
@@ -86,6 +93,14 @@ public class Libro {
         this.titulo = titulo;
     }
 
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
+    }
+
     public String getAutor() {
         return autor;
     }
@@ -114,6 +129,7 @@ public class Libro {
                 ", id='" + id + '\'' +
                 ", disponible=" + disponible +
                 ", estudiante=" + estudiantePrestado +
+                ", editorial=" + editorial +
                 '}';
     }
 
