@@ -30,7 +30,7 @@ public class EstudianteApp {
         las_48_leyes.prestar(ivan);
 
         System.out.println(las_48_leyes.estaDisponible());
-        System.out.println(ivan);
+        System.out.println(ivan.getListaLibros());
 
         habitos_atomicos.prestar(ivan);
 
@@ -38,7 +38,8 @@ public class EstudianteApp {
         System.out.println("Libros disponibles: " + Libro.getLibrosDisponibles());
 
         las_48_leyes.devolver();
-        las_48_leyes.devolver();
+        habitos_atomicos.devolver();
+        System.out.println(ivan.getListaLibros());
         System.out.println(las_48_leyes.estaDisponible());
 
 

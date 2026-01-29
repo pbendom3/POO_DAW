@@ -1,5 +1,7 @@
 package Biblio;
 
+import java.util.ArrayList;
+
 public class Estudiante {
 
     private static int contadorEstudiantes = 0;
@@ -9,14 +11,14 @@ public class Estudiante {
     private String curso;
     private int nia;
     private String email;
-    private Libro libro;
+    private ArrayList<Libro> listaLibros;
 
     public Estudiante (String nombre, String curso, String email){
         this.nombre = nombre;
         this.curso =  curso;
         this.email =  email;
         nia = ++contadorEstudiantes;
-        libro =null;
+        listaLibros = new ArrayList<>();
     }
 
     public Estudiante (String nombre){
@@ -37,12 +39,20 @@ public class Estudiante {
 
     }
 
-    public Libro getLibro() {
-        return libro;
+    public void insertarLibro (Libro libro){
+        listaLibros.add(libro);
     }
 
-    public void setLibro(Libro libro) {
-        this.libro = libro;
+    public void borrarLibro (Libro libro){
+        listaLibros.remove(libro);
+    }
+
+    public ArrayList<Libro> getListaLibros() {
+        return listaLibros;
+    }
+
+    public void setListaLibros(ArrayList<Libro> listaLibros) {
+        this.listaLibros = listaLibros;
     }
 
     public String getNombre() {
@@ -84,7 +94,6 @@ public class Estudiante {
                 ", curso='" + curso + '\'' +
                 ", nia=" + nia +
                 ", email='" + email + '\'' +
-                ", libro='" + libro.getTitulo() +
                 '}';
     }
 
