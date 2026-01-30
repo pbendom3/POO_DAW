@@ -6,9 +6,14 @@ public class ChaletApp {
 
         Casa pisito = new Casa("Calle Falsa 123");
 
+        System.out.println(pisito.getPropietario());
+
         pisito.crearHabitacion("cocina",12.5);
         pisito.crearHabitacion("terraza",4);
         pisito.crearHabitacion("despacho",13);
+
+        pisito.borrarHabitacion("despacho");
+
         pisito.crearHabitacion("despacho",5);
 
         pisito.mostrarHabitaciones();
