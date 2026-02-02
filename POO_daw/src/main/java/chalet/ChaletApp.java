@@ -20,6 +20,7 @@ public class ChaletApp {
 
         System.out.println("La habitación más grande es " + pisito.getHabitacionMasGrande().getNombre());
 
+        pisito.getListaHabitaciones().get(0).
 
 
 
