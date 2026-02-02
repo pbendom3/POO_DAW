@@ -27,6 +27,9 @@ El programa utiliza la **POO** y se basa en la siguiente estructura:
 ### Contenido de las clases (.java)
 
 **Editorial.java**
+
+[Enlace al código](https://github.com/pbendom3/POO_DAW/blob/main/POO_daw/src/main/java/Biblio/Editorial.java)
+
 ````
 public class Editorial {
 
@@ -68,6 +71,23 @@ public class Editorial {
 
 ## 3. Programa principal (BiblioApp)
 
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
 ## 4. Pruebas
 
 ## 5. Entrega 
+
+- 
