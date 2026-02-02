@@ -88,6 +88,8 @@ public class Editorial {
 
 ## 4. Pruebas
 
+
 ## 5. Entrega 
 
-- 
+- [X] URL GitHub:
+- [ ] Documentos 
