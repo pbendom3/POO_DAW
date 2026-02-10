@@ -1,0 +1,25 @@
+
+@startuml
+package Empleado {
+
+    class Empleado {
+        - nombre : String
+        - edad : int
+
+        + Empleado(nombre : String, edad : int)
+        + realizarTarea() : void
+        + getNombre() : String
+        + setNombre(nombre : String) : void
+        + getEdad() : int
+        + setEdad(edad : int) : void
+        + toString() : String
+    }
+
+    class Diseñador {
+        + Diseñador(nombre : String, edad : int)
+        + realizarTarea() : void
+    }
+
+    Empleado <|-- Diseñador
+}
+@enduml
