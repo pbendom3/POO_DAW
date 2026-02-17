@@ -31,6 +31,11 @@ public class BarPacoApp {
         entrarBar(patri);
         entrarBar(pepe);
 
+        izan.accederBanyo();
+        pepe.accederBanyo();
+        jose.accederBanyo();
+
+
     }
 
     public static void entrarBar(Persona persona){

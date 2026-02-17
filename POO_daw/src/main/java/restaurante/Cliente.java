@@ -33,6 +33,11 @@ public class Cliente extends Persona{
     }
 
     @Override
+    public void accederBanyo() {
+        System.out.println("El cliente se dirige al baño");
+    }
+
+    @Override
     public String toString() {
         return "Cliente{" +
                 "mesa=" + mesa +
