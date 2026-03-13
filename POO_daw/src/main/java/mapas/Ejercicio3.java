@@ -1,8 +1,6 @@
 package mapas;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Ejercicio3 {
 
